@@ -8,32 +8,24 @@
 
 The purpose of this project is to understand the underlying mathematics of neural networks.Especially,to understand how the backpropagation computes the gradient of the loss function with respect to the weights of the network for a single input–output example,and updates weights to minimize loss.
 
+Animal_classification is used to build a simple Neutral network to deal with simplfied data in csv format. 
+
+Image_Classification is used to build a more complex Neutral network to deal with images. 
+
 ## Data
 
 ### Zoo Dataset
 
 This dataset consists of 101 animals from a zoo. There are 16 variables with various traits to describe the animals. The 7 Class Types are: Mammal, Bird, Reptile, Fish, Amphibian, Bug and Invertebrate. The purpose for this dataset is to be able to predict the classification of the animals, based upon the variables.
 
-Attribute Information: (name of attribute and type of value domain)
+Part of attribute information:
 
-1.	animal_name: Unique for each instance
-2.	hair Boolean
-3.	feathers Boolean
-4.	eggs Boolean
-5.	milk Boolean
-6.	airborne Boolean
-7.	aquatic Boolean
-8.	predator Boolean
-9.	toothed Boolean
-10.	backbone Boolean
-11.	breathes Boolean
-12.	venomous Boolean
-13.	fins Boolean
-14.	legs Numeric (set of values: {0,2,4,5,6,8})
-15.	tail Boolean
-16.	domestic Boolean
-17.	catsize Boolean
-18.	class_type Numeric (integer values in range [1,7])
+1.	hair Boolean
+2.	feathers Boolean
+3.	eggs Boolean
+4.	milk Boolean
+5.	airborne Boolean
+6.	aquatic Boolean
 
 Download link: https://www.kaggle.com/uciml/zoo-animal-classification?select=zoo.csv
 
@@ -60,7 +52,7 @@ Generally, The network model consists of following conponents.
  
  5. the weights between layer and the weight between the nodes in one layer.
  
- 6. activation functions at layer
+ 6. activation functions at each layer
 ~~
 ### Animal classification
 ~~
@@ -83,10 +75,14 @@ Generally, The network model consists of following conponents.
 
 5. Training and Testing
 
-  Roughly 80% of the data was used to train the model, while the other 20% was used for testing. Both models were then trained for a length of 10000 epochs.
+  Deal with the raw data in _main.py_, and split the data into two parts, roughly 70% of the data was used to train the model, while the other 30% was used for testing.
+  
+  The feed forward function is achived in the _NN.py_ by _mlp_ function, and the back propagation function is achieved by _cross_entropy_back_prop_ function.
+  
+  The _model_accuracy_ function is used to caculate the accuracy in each iteration and guide the updating of the model parameters to meet the loss function.
 ~~
-Discussion
-The neural network model for the zoo dataset had an accuracy of 80%. This model finished training much faster than the model used for the mushroom dataset because the computations for the derivative of the ReLU activation function are much quicker than those for the derivative of the sigmoid activation function.
+
+### Animal classification
 
 
 ## Approach
