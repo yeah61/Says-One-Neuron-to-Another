@@ -6,7 +6,7 @@
 
 ## Purpose
 
-The purpose of this project is to understand the underlying mathematics of neural networks, especially, to understand how the backpropagation computes the gradient of the loss function with respect to the weights of the network,and updates weights to minimize loss.
+The purpose of this project is to understand the underlying mathematics of neural networks, especially, to understand how the backpropagation computes the gradient of the loss function with respect to the weights of the network, and updates weights to minimize loss.
 
 Animal_Classification is used to build a simple neutral network to deal with simplfied data in csv format. 
 
@@ -79,7 +79,7 @@ Generally, the network model consists of following conponents.
 
 5. Training and Testing
 
-    Deal with the raw data in _main.py_, and split the data into two parts, roughly 70% of the data was used to train the model, while the other 30% was used for testing.
+    Deal with the raw data in _main.py_, and split the data into two parts, roughly 70% of the data was used to train the model, while the other 30% was used for testing. The ratio can be adjusted through argument in _split = round ()_ of the _main.py_.
   
     The feed forward function is achived in the _NN.py_ by _mlp_ function, and the back propagation function is achieved by _cross_entropy_back_prop_ function.
   
