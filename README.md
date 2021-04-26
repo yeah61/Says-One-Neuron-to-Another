@@ -6,9 +6,9 @@
 
 ## Purpose
 
-The purpose of this project is to understand the underlying mathematics of neural networks.Especially,to understand how the backpropagation computes the gradient of the loss function with respect to the weights of the network for a single input–output example,and updates weights to minimize loss.
+The purpose of this project is to understand the underlying mathematics of neural networks, especially, to understand how the backpropagation computes the gradient of the loss function with respect to the weights of the network,and updates weights to minimize loss.
 
-Animal_classification is used to build a simple Neutral network to deal with simplfied data in csv format. 
+Animal_Classification is used to build a simple neutral network to deal with simplfied data in csv format. 
 
 Image_Classification is used to build a more complex Neutral network to deal with images. 
 
@@ -40,7 +40,7 @@ Download link: http://www.cs.toronto.edu/~kriz/cifar.html
 ## Algorithm
 
 
-Generally, The network model consists of following conponents.
+Generally, the network model consists of following conponents.
 
  1. input (vector of features)
  
@@ -88,7 +88,9 @@ Generally, The network model consists of following conponents.
 
 ### Image classification
 
+The neural network framework is shown:
 
+![Alt text](https://github.com/yeah61/Says-One-Neuron-to-Another/blob/main/Image_Classification/model%20framework.png)
 
 ## Approach
 
@@ -96,29 +98,29 @@ Generally, The network model consists of following conponents.
 
 #### prerequisite
 
-This project was written in Python 3.7.2 and relies on two modules, **numpy** and **pandas**.
+   This project was written in Python 3.7.2 and relies on two modules, **numpy** and **pandas**.
 
 #### train 
 
-Run the following command to train the NN model:
+   Run the following command to train the NN model:
 
 ```
 python3 main.py
 ```
 
-Modify the arguements in the _split = round()_ to change the ratio of training and testing data.
+   Modify the arguements in the _split = round()_ to change the ratio of training and testing data.
 
-Modify the arguements in the _model = mlp()_ to change the hidden layer width, learning rate and maximum epochs.
+   Modify the arguements in the _model = mlp()_ to change the hidden layer width, learning rate and maximum epochs.
 
 ### Image classification
 
 #### prerequisite
 
-This project was written in Python 3.7.2 and relies on one module **numpy** .
+   This project was written in Python 3.7.2 and relies on one module **numpy** .
 
 #### train 
 
-Run the following command to train the NN model:
+   Run the following command to train the NN model:
 
 ```
 python3 start.py
@@ -141,11 +143,12 @@ The accuracy is only 0.14, the main reason may be:
 
 1. the model is too simple with only once convolution, Feature extraction cannot reflect real features
 
-2. overfitting；
+2. overfitting
 
-3. original train data is too complex and comprehensive.
-
+3. original train data is too complex and comprehensive
 
 ## Acknowlegdement
 
-
+Through this project, I get a basic understanding of the neutral network. But there is still a long way to utilize the neutral network model to do more complex tasks.
+such as the image classification in this repository. I made a lot of references to this article: 
+https://www.cnblogs.com/further-further-further/p/10430073.html. I am looking forward to further study and practise to get better undestanding of the neutral network.
