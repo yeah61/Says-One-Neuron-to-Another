@@ -40,7 +40,9 @@ Download link: http://www.cs.toronto.edu/~kriz/cifar.html
 ## Algorithm
 
 Generally, The network model consists of following conponents.
+
 ~~
+
  1. input (vector of features)
  
  2. target output
@@ -53,9 +55,13 @@ Generally, The network model consists of following conponents.
  5. the weights between layer and the weight between the nodes in one layer.
  
  6. activation functions at each layer
+
 ~~
+
 ### Animal classification
+
 ~~
+
 1. Input Layers
 
   The width of the input layer was chosen to match the number of features for each dataset. The input layer was given a width of 16, since it has 16 features
@@ -71,6 +77,7 @@ Generally, The network model consists of following conponents.
 4. Activation functions
 
   The rectified linear unit (ReLU) was chosen as the activation functions for the hidden layer. ReLUs perform fast calculations and are known to avoid the vanish gradient problem that occurs with logistic sigmoid activation functions.
+  
   The softmax activation function was chosen for the output layer. This is because softmax functions output probablistic distributions for a given set of classes, which is useful for multiclass classification problems.
 
 5. Training and Testing
@@ -80,9 +87,51 @@ Generally, The network model consists of following conponents.
   The feed forward function is achived in the _NN.py_ by _mlp_ function, and the back propagation function is achieved by _cross_entropy_back_prop_ function.
   
   The _model_accuracy_ function is used to caculate the accuracy in each iteration and guide the updating of the model parameters to meet the loss function.
+  
 ~~
 
-### Animal classification
+### Image classification
 
 
 ## Approach
+
+### Animal classification
+
+#### prerequisite
+
+This project was written in Python 3.7.2 and relies on two modules, **numpy** and **pandas**.
+
+#### train 
+
+Run the following command to train the NN model:
+
+```
+python3 main.py
+
+```
+
+Modify the arguements in the _split = round()_ to change the ratio of training and testing data.
+
+Modify the arguements in the _model = mlp()_ to change the hidden layer width, learning rate and maximum epochs.
+
+### Image classification
+
+#### prerequisite
+
+This project was written in Python 3.7.2 and relies on one module **numpy** .
+
+#### train 
+
+Run the following command to train the NN model:
+
+```
+python3 start.py
+
+```
+## Results
+
+## Discussion
+
+## Acknowlegdement
+
+
