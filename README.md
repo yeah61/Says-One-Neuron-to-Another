@@ -39,9 +39,8 @@ Download link: http://www.cs.toronto.edu/~kriz/cifar.html
 
 ## Algorithm
 
-Generally, The network model consists of following conponents.
 
-~~
+Generally, The network model consists of following conponents.
 
  1. input (vector of features)
  
@@ -56,11 +55,9 @@ Generally, The network model consists of following conponents.
  
  6. activation functions at each layer
 
-~~
 
 ### Animal classification
 
-~~
 
 1. Input Layers
 
@@ -88,7 +85,6 @@ Generally, The network model consists of following conponents.
   
   The _model_accuracy_ function is used to caculate the accuracy in each iteration and guide the updating of the model parameters to meet the loss function.
   
-~~
 
 ### Image classification
 
@@ -130,7 +126,9 @@ python3 start.py
 ```
 ## Results
 
+
 ## Discussion
+
 
 ## Acknowlegdement
 
