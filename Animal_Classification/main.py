@@ -10,7 +10,7 @@ inputs = df.drop(columns=['animal_name', 'class_type'])
 outputs = pd.get_dummies(df['class_type'].values)
 outputs = outputs.values
 
-# 80-20 split for training and testing sets
+# 70-30 split for training and testing sets
 split = round(.7 * len(inputs))
 
 X_train = np.array(inputs[:split])
@@ -20,7 +20,7 @@ y_train = np.array(outputs[:split])
 y_test = np.array(outputs[split:])
 
 
-model = mlp(inputs=X_train, outputs=y_train, hidden_layer_width=32, learning_rate=0.01, epochs=100000)
+model = mlp(inputs=X_train, outputs=y_train, hidden_layer_width=32, learning_rate=0.01, epochs=10000)
 
 hw = model['hidden layer weights']
 ow = model['output layer weights']
