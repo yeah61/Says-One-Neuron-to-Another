@@ -88,7 +88,7 @@ Generally, the network model consists of following conponents.
 
 ### Image classification
 
-The neural network framework is shown:
+The neural network framework is shown as below:
 
 ![Alt text](https://github.com/yeah61/Says-One-Neuron-to-Another/blob/main/Image_Classification/model%20framework.png)
 
