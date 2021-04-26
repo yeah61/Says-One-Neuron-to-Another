@@ -61,32 +61,33 @@ Generally, The network model consists of following conponents.
 
 1. Input Layers
 
-  The width of the input layer was chosen to match the number of features for each dataset. The input layer was given a width of 16, since it has 16 features
+    The width of the input layer was chosen to match the number of features for each dataset. The input layer was given a width of 16, since it has 16 features
 
 2. Hidden Layers
 
-  The hidden layer width was arbitrarily set to size 20.
+    The hidden layer width was arbitrarily set to size 20.
 
 3. Output Layers
 
-  The width of the output layer was set to match the number of possible classes for a given observation. The output layer width was set to size 7, since its network is attempting to correctly classify an animal to its given class (mammal, bird, reptile, fish, amphibian, bug, invertebrate). 
+    The width of the output layer was set to match the number of possible classes for a given observation. The output layer width was set to size 7, since its network is attempting to correctly classify an animal to its given class (mammal, bird, reptile, fish, amphibian, bug, invertebrate). 
 
 4. Activation functions
 
-  The rectified linear unit (ReLU) was chosen as the activation functions for the hidden layer. ReLUs perform fast calculations and are known to avoid the vanish gradient problem that occurs with logistic sigmoid activation functions.
+    The rectified linear unit (ReLU) was chosen as the activation functions for the hidden layer. ReLUs perform fast calculations and are known to avoid the vanish gradient problem that occurs with logistic sigmoid activation functions.
   
-  The softmax activation function was chosen for the output layer. This is because softmax functions output probablistic distributions for a given set of classes, which is useful for multiclass classification problems.
+    The softmax activation function was chosen for the output layer. This is because softmax functions output probablistic distributions for a given set of classes, which is useful for multiclass classification problems.
 
 5. Training and Testing
 
-  Deal with the raw data in _main.py_, and split the data into two parts, roughly 70% of the data was used to train the model, while the other 30% was used for testing.
+    Deal with the raw data in _main.py_, and split the data into two parts, roughly 70% of the data was used to train the model, while the other 30% was used for testing.
   
-  The feed forward function is achived in the _NN.py_ by _mlp_ function, and the back propagation function is achieved by _cross_entropy_back_prop_ function.
+    The feed forward function is achived in the _NN.py_ by _mlp_ function, and the back propagation function is achieved by _cross_entropy_back_prop_ function.
   
-  The _model_accuracy_ function is used to caculate the accuracy in each iteration and guide the updating of the model parameters to meet the loss function.
+    The _model_accuracy_ function is used to caculate the accuracy in each iteration and guide the updating of the model parameters to meet the loss function.
   
 
 ### Image classification
+
 
 
 ## Approach
@@ -103,7 +104,6 @@ Run the following command to train the NN model:
 
 ```
 python3 main.py
-
 ```
 
 Modify the arguements in the _split = round()_ to change the ratio of training and testing data.
@@ -122,12 +122,28 @@ Run the following command to train the NN model:
 
 ```
 python3 start.py
-
 ```
 ## Results
 
+### Animal classification
 
-## Discussion
+![Alt text](https://github.com/yeah61/Says-One-Neuron-to-Another/blob/main/Animal_Classification/animal_classification_result.png)
+
+The neural network model for the zoo dataset had an accuracy of 80%. This model finished training very fast because the computations for the derivative of the ReLU activation function are much quicker than those for the derivative of the sigmoid activation function.
+
+Try training the model with different hidden layer width, but the accuracy doesn't change.
+
+### Image classification
+
+![Alt text](https://github.com/yeah61/Says-One-Neuron-to-Another/blob/main/Image_Classification/Image_classification_result.png)
+
+The accuracy is only 0.14, the main reason may be: 
+
+1. the model is too simple with only once convolution, Feature extraction cannot reflect real features
+
+2. overfitting；
+
+3. original train data is too complex and comprehensive.
 
 
 ## Acknowlegdement
