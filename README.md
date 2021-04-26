@@ -65,7 +65,7 @@ Generally, the network model consists of following conponents.
 
 2. Hidden Layers
 
-    The hidden layer width was arbitrarily set to size 20.
+    The hidden layer width was arbitrarily set to size 32.
 
 3. Output Layers
 
